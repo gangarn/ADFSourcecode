@@ -1,0 +1,77 @@
+{
+	"name": "DestinationDataset_s8h",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Price",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Age",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "KM",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "FuelType",
+				"type": "nvarchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "HP",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "MetColor",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Automatic",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "CC",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Doors",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "Weight",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "USEDCARS"
+		}
+	}
+}
