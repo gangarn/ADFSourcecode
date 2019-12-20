@@ -1,0 +1,164 @@
+{
+	"name": "CopyPipeline_s8h",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_s8h",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "Test/UsedCars.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.USEDCARS"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreReadSettings",
+							"recursive": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Price",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Price",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Age",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Age",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "KM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "KM",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "FuelType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FuelType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "HP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "HP",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "MetColor",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MetColor",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Automatic",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Automatic",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "CC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CC",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Doors",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Doors",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Weight",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Weight",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_s8h",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_s8h",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
