@@ -1,0 +1,85 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "nareshdf12"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_s8h')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "Price",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Age",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "KM",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "FuelType",
+						"type": "nvarchar"
+					},
+					{
+						"name": "HP",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "MetColor",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Automatic",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "CC",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Doors",
+						"type": "float",
+						"precision": 15
+					},
+					{
+						"name": "Weight",
+						"type": "float",
+						"precision": 15
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "USEDCARS"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

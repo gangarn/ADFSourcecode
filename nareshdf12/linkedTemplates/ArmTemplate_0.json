@@ -75,63 +75,52 @@
 				"schema": [
 					{
 						"name": "Price",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "Age",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "KM",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "FuelType",
-						"type": "nvarchar",
-						"precision": 0,
-						"scale": 0
+						"type": "nvarchar"
 					},
 					{
 						"name": "HP",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "MetColor",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "Automatic",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "CC",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "Doors",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					},
 					{
 						"name": "Weight",
-						"type": "int",
-						"precision": 10,
-						"scale": 0
+						"type": "float",
+						"precision": 15
 					}
 				],
 				"typeProperties": {
