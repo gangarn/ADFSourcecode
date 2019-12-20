@@ -154,7 +154,48 @@
 					"firstRowAsHeader": true,
 					"quoteChar": "\""
 				},
-				"schema": []
+				"schema": [
+					{
+						"name": "Price",
+						"type": "String"
+					},
+					{
+						"name": "Age",
+						"type": "String"
+					},
+					{
+						"name": "KM",
+						"type": "String"
+					},
+					{
+						"name": "FuelType",
+						"type": "String"
+					},
+					{
+						"name": "HP",
+						"type": "String"
+					},
+					{
+						"name": "MetColor",
+						"type": "String"
+					},
+					{
+						"name": "Automatic",
+						"type": "String"
+					},
+					{
+						"name": "CC",
+						"type": "String"
+					},
+					{
+						"name": "Doors",
+						"type": "String"
+					},
+					{
+						"name": "Weight",
+						"type": "String"
+					}
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStore1')]"
@@ -213,7 +254,7 @@
 										},
 										"sink": {
 											"name": "Price",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -223,7 +264,7 @@
 										},
 										"sink": {
 											"name": "Age",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -233,7 +274,7 @@
 										},
 										"sink": {
 											"name": "KM",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -253,7 +294,7 @@
 										},
 										"sink": {
 											"name": "HP",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -263,7 +304,7 @@
 										},
 										"sink": {
 											"name": "MetColor",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -273,7 +314,7 @@
 										},
 										"sink": {
 											"name": "Automatic",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -283,7 +324,7 @@
 										},
 										"sink": {
 											"name": "CC",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -293,7 +334,7 @@
 										},
 										"sink": {
 											"name": "Doors",
-											"type": "Int32"
+											"type": "Double"
 										}
 									},
 									{
@@ -303,7 +344,7 @@
 										},
 										"sink": {
 											"name": "Weight",
-											"type": "Int32"
+											"type": "Double"
 										}
 									}
 								]
