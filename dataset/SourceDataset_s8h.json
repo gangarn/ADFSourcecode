@@ -18,6 +18,47 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "Price",
+				"type": "String"
+			},
+			{
+				"name": "Age",
+				"type": "String"
+			},
+			{
+				"name": "KM",
+				"type": "String"
+			},
+			{
+				"name": "FuelType",
+				"type": "String"
+			},
+			{
+				"name": "HP",
+				"type": "String"
+			},
+			{
+				"name": "MetColor",
+				"type": "String"
+			},
+			{
+				"name": "Automatic",
+				"type": "String"
+			},
+			{
+				"name": "CC",
+				"type": "String"
+			},
+			{
+				"name": "Doors",
+				"type": "String"
+			},
+			{
+				"name": "Weight",
+				"type": "String"
+			}
+		]
 	}
 }
